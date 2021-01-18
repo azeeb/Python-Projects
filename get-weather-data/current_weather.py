@@ -1,7 +1,7 @@
 import requests
 
 #Api key
-api_key = "9097aa05459be4fd0dd7b7a5ac272b5f"
+api_key = "####"
 
 #Store url
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -16,6 +16,7 @@ complete_url = base_url + "q=" + city_name + "&units=metric"+ "&appid=" + api_ke
 response = requests.get(complete_url)
 x = response.json()
 
+#displaying useful data
 if x["cod"] != "404":
     y = x['main']
     z = x["weather"]
